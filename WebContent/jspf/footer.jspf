@@ -1,0 +1,12 @@
+<footer class="footer">
+	<div class="container-fluid">
+
+		<p class="copyright pull-right">
+			&copy;
+			<script>
+				document.write(new Date().getFullYear())
+			</script>
+			TFG Version 1.0.0, Creater: Jaime Gomez
+		</p>
+	</div>
+</footer>

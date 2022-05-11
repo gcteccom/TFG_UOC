@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23-mar-2018 19:41:09 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tfg_uoc" dynamic-insert="false" dynamic-update="false" mutable="true" name="tfg_uoc.dao.Perchero" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="perchero">
+        <id name="idPerchero" type="java.lang.Integer">
+            <column name="idPerchero"/>
+        </id>
+        <many-to-one class="tfg_uoc.dao.Factura" embed-xml="true" fetch="select" insert="true" name="factura" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="idfactura"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="estado" optimistic-lock="true" type="boolean" unique="false">
+            <column name="estado" not-null="true"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>

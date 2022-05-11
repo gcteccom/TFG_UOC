@@ -1,0 +1,52 @@
+
+<%
+	int acceso = 2;
+
+	if(!(session.getAttribute("usuario") == null)){
+		
+		acceso = (int) session.getAttribute("tipoAcceso");
+		
+	} 
+
+%>
+
+<div class="sidebar" data-color="gray" data-image="assets/img/sidebar-6.jpg">
+
+	<div class="sidebar-wrapper">
+
+		<div class="logo">
+<!-- 			<img alt="" src=""> -->
+		</div>
+
+		<ul class="nav">
+			<li><a href="generarTicket.jsp"> <i class="pe-7s-ticket"></i>
+					<p>Tickets</p>
+			</a></li>
+			<li><a href="salidaTicket.jsp"> <i class="pe-7s-news-paper"></i>
+					<p>Salida Tickets</p>
+			</a></li>
+			<li><a href="carrusel.jsp"> <i class="pe-7s-keypad"></i>
+					<p>Carrusel</p>
+			</a></li>
+			<li><a href="clientes.jsp"> <i class="pe-7s-user"></i>
+					<p>Clientes</p>
+			</a></li>
+
+			<%
+				if (acceso == 1) {
+			%>
+					<li><a href="servicios.jsp"> <i class="pe-7s-note2"></i>
+							<p>Servicios</p>
+					</a></li>
+					<li><a href="reportes.jsp"> <i class="pe-7s-graph"></i>
+							<p>Reportes</p>
+					</a></li>
+					<li><a href="mantenimiento.jsp"> <i class="pe-7s-tools"></i>
+							<p>Mantenimiento</p>
+					</a></li>
+			<%
+				}
+			%>
+		</ul>
+	</div>
+</div>

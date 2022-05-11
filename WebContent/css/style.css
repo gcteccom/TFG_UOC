@@ -1,0 +1,197 @@
+@charset "ISO-8859-1";
+
+#areaTicketCliente {
+	border-style: outset;
+	padding: 5px;
+
+}
+
+.posicionBotonesTicket {
+	margin-top: 25px;
+}
+
+#enviarResumen{
+	
+	margin-top: 25px;
+	
+}
+
+#posicionamientoRadio{
+	
+	margin-top: 5px;
+	
+}
+
+.container{
+	
+	width: 100%;
+	
+}
+
+.cantidadServicios{
+	
+	width: 50px;
+		
+}
+
+.agregarServicioModal{
+		
+	font-size: 16px;
+	color: #4F9BF1;
+	
+}
+
+.agregarServicioModal:hover{
+	
+	cursor:pointer;
+
+}
+
+.agregarTicketModal{
+		
+	font-size: 16px;
+	color: #4F9BF1;
+	
+}
+
+.agregarTicketModal:hover{
+	
+	cursor:pointer;
+
+}
+
+.eliminarFila{
+	
+	color:red;
+	
+}
+
+.eliminarFila:hover{
+	
+	cursor:pointer;
+	
+}
+
+.montoTotal{
+	
+	font-size: large;
+	color: green;
+		
+}
+
+#areaTicketResumen{
+		
+	bottom: 0;
+	width:100%;
+	border-style: outset;
+	padding: 5px;
+		
+}
+
+#prendasResumen{
+	
+	text-align: right;
+		
+}
+
+#perchasResumen{
+	
+	text-align: right;
+		
+}
+
+#totalResumen{
+	
+	font-size: xx-large;
+	color: green;
+	text-align: right;
+		
+}
+
+#totalModal{
+	
+	font-size: xx-large;
+	color: green;
+	text-align: right;
+	
+}
+
+#devueltaModal{
+	
+	color: blue;
+	font-style: italic;
+	
+}
+
+.textoImagen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedorImagen{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.imagenSeleccionCarrusel:hover{
+	
+	cursor:pointer;
+}
+
+.textoAlaDerecha{
+	
+	text-align: right;
+	
+}
+
+.estiloBotonesModal{
+	
+	font-size: xx-large;
+	text-align: right;
+	
+}
+
+#areaSalidaTicket {
+	border-style: outset;
+	padding: 5px;
+
+}
+
+.contenedorSalidaCentrales{
+	
+	border-style: outset;
+	padding: 5px;
+	
+}
+
+#areaResumenSalidaTicket {
+	
+	border-style: outset;
+	padding: 5px;
+
+}
+
+#imagenUsuario{
+	
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	
+}
+
+.logo img{
+	
+	width: 100%;
+  	height: auto;
+}
+
+@supports(object-fit: cover){
+    .logo img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}

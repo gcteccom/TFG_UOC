@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23-mar-2018 19:41:09 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tfg_uoc" dynamic-insert="false" dynamic-update="false" mutable="true" name="tfg_uoc.dao.Usuarioslogin" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="usuarioslogin">
+        <id name="usuario" type="string">
+            <column length="20" name="usuario"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="tfg_uoc.dao.Tipousuario" embed-xml="true" fetch="select" insert="true" name="tipousuario" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="idTipo" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="Nombre" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="pass" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="pass" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="facturas" optimistic-lock="true" sort="unsorted" table="factura">
+            <key on-delete="noaction">
+                <column length="20" name="usuario" not-null="true"/>
+            </key>
+            <one-to-many class="tfg_uoc.dao.Factura" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

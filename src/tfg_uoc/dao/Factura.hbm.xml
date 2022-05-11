@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23-mar-2018 19:41:09 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tfg_uoc" dynamic-insert="false" dynamic-update="false" mutable="true" name="tfg_uoc.dao.Factura" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="factura">
+        <id name="idFactura" type="java.lang.Integer">
+            <column name="idFactura"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="tfg_uoc.dao.Clientes" embed-xml="true" fetch="select" insert="true" name="clientes" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="20" name="dni" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="tfg_uoc.dao.Usuarioslogin" embed-xml="true" fetch="select" insert="true" name="usuarioslogin" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="20" name="usuario" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="fecha" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecha" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaPago" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecha_pago"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaEntrega" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecha_entrega"/>
+        </property>
+        <property generated="never" lazy="false" name="prendas" optimistic-lock="true" type="int" unique="false">
+            <column name="prendas" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="perchas" optimistic-lock="true" type="int" unique="false">
+            <column name="perchas" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="total" optimistic-lock="true" type="float" unique="false">
+            <column name="total" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="estado" optimistic-lock="true" type="boolean" unique="false">
+            <column name="estado" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="percheros" optimistic-lock="true" sort="unsorted" table="perchero">
+            <key on-delete="noaction">
+                <column name="idfactura"/>
+            </key>
+            <one-to-many class="tfg_uoc.dao.Perchero" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="userviciofacturas" optimistic-lock="true" sort="unsorted" table="userviciofactura">
+            <key on-delete="noaction">
+                <column name="idfactura" not-null="true"/>
+            </key>
+            <one-to-many class="tfg_uoc.dao.Userviciofactura" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="upercherofacturas" optimistic-lock="true" sort="unsorted" table="upercherofactura">
+            <key on-delete="noaction">
+                <column name="idfactura" not-null="true"/>
+            </key>
+            <one-to-many class="tfg_uoc.dao.Upercherofactura" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

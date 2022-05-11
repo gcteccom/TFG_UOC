@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/tfg_uoc</property>
+        <property name="hibernate.connection.username">usuario</property>
+        <property name="hibernate.connection.password">@Y2953095r</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="tfg_uoc/dao/Servicio.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Userviciofactura.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Upercherofactura.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Usuarioslogin.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Perchero.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Tipousuario.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Factura.hbm.xml"/>
+        <mapping resource="tfg_uoc/dao/Clientes.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

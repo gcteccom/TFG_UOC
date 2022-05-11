@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23-mar-2018 19:41:09 by Hibernate Tools 5.2.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tfg_uoc" dynamic-insert="false" dynamic-update="false" mutable="true" name="tfg_uoc.dao.Clientes" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="clientes">
+        <id name="dni" type="string">
+            <column length="20" name="dni"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="nombre" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="apellido" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="apellido" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fecha" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecha"/>
+        </property>
+        <property generated="never" lazy="false" name="telefono" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="telefono"/>
+        </property>
+        <property generated="never" lazy="false" name="movil" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="movil"/>
+        </property>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="direccion"/>
+        </property>
+        <property generated="never" lazy="false" name="poblacion" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="poblacion"/>
+        </property>
+        <property generated="never" lazy="false" name="provincia" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="provincia"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="email"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>
