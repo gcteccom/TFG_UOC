@@ -12,11 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.exception.DataException;
 
 import tfg_uoc.dao.Factura;
 import tfg_uoc.dao.HibernateUtil;
-import tfg_uoc.dao.Servicio;
 
 /**
  * Servlet implementation class GestionCobro

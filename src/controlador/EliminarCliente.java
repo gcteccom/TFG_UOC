@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
-import com.google.gson.Gson;
 
 import tfg_uoc.dao.Clientes;
 import tfg_uoc.dao.HibernateUtil;

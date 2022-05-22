@@ -21,8 +21,11 @@ public class Factura implements java.io.Serializable {
 	private int perchas;
 	private float total;
 	private boolean estado;
+	@SuppressWarnings("rawtypes")
 	private Set percheros = new HashSet(0);
+	@SuppressWarnings("rawtypes")
 	private Set userviciofacturas = new HashSet(0);
+	@SuppressWarnings("rawtypes")
 	private Set upercherofacturas = new HashSet(0);
 
 	public Factura() {
@@ -51,6 +54,7 @@ public class Factura implements java.io.Serializable {
 		this.estado = estado;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public Factura(Clientes clientes, Usuarioslogin usuarioslogin, Date fecha, Date fechaPago, Date fechaEntrega,
 			int prendas, int perchas, float total, boolean estado, Set percheros, Set userviciofacturas,
 			Set upercherofacturas) {
@@ -148,27 +152,27 @@ public class Factura implements java.io.Serializable {
 		this.estado = estado;
 	}
 
-	public Set getPercheros() {
+	public Set<?> getPercheros() {
 		return this.percheros;
 	}
 
-	public void setPercheros(Set percheros) {
+	public void setPercheros(Set<?> percheros) {
 		this.percheros = percheros;
 	}
 
-	public Set getUserviciofacturas() {
+	public Set<?> getUserviciofacturas() {
 		return this.userviciofacturas;
 	}
 
-	public void setUserviciofacturas(Set userviciofacturas) {
+	public void setUserviciofacturas(Set<?> userviciofacturas) {
 		this.userviciofacturas = userviciofacturas;
 	}
 
-	public Set getUpercherofacturas() {
+	public Set<?> getUpercherofacturas() {
 		return this.upercherofacturas;
 	}
 
-	public void setUpercherofacturas(Set upercherofacturas) {
+	public void setUpercherofacturas(Set<?> upercherofacturas) {
 		this.upercherofacturas = upercherofacturas;
 	}
 

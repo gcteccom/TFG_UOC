@@ -5,8 +5,8 @@
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/tfg_uoc</property>
-        <property name="hibernate.connection.username">usuario</property>
-        <property name="hibernate.connection.password">@Y2953095r</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Y2953095r</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.search.autoregister_listeners">true</property>
         <property name="hibernate.show_sql">true</property>

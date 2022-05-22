@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,9 +15,7 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.exception.DataException;
 
 import Utils.Utils;
-import tfg_uoc.dao.Clientes;
 import tfg_uoc.dao.HibernateUtil;
-import tfg_uoc.dao.Servicio;
 import tfg_uoc.dao.Tipousuario;
 import tfg_uoc.dao.Usuarioslogin;
 

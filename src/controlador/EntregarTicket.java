@@ -66,7 +66,8 @@ public class EntregarTicket extends HttpServlet {
 			String sql = "SELECT p FROM Perchero p where p.factura=" + idFactura;
 			
 			Query query = session.createQuery(sql);
-    		List<Perchero> percheros = query.list();
+    		@SuppressWarnings("unchecked")
+			List<Perchero> percheros = query.list();
     		
     		for (Perchero perchero : percheros){
     			    			

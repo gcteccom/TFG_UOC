@@ -1,7 +1,6 @@
 package controlador;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +14,6 @@ import org.hibernate.Transaction;
 
 import com.google.gson.Gson;
 
-import tfg_uoc.dao.Clientes;
 import tfg_uoc.dao.HibernateUtil;
 import tfg_uoc.dao.Usuarioslogin;
 import vo.Usuario;
